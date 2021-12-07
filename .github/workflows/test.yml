@@ -11,7 +11,7 @@ jobs:
           java-version: '8'
           cache: 'maven'
       - name: Convert test project to C#
-        uses: javiertuya/sharpen-action@develop
+        uses: javiertuya/sharpen-action@main
         with:
           working-dir: 'test'
           project-dir: 'src/main/java'

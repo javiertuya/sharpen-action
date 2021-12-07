@@ -16,7 +16,7 @@ Additional arguments to be passed to sharpen.
 ## Example usage
 
 ```
-uses: javiertuya/sharpen-action
+uses: javiertuya/sharpen-action@main
 with:
   project-dir: 'src/main/java'
   sharpen-args: '@sharpen-all-options.txt'
