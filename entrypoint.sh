@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "Working dir: $1"
+echo "Working dir: $INPUT_"
 echo "Project dir: $2"
 echo "Sharpen args: $3"
 echo "Running sharpen..."

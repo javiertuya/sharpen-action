@@ -13,14 +13,14 @@ import org.junit.Test;
 public class TestSharpenOutputComparison {
 	@Test
 	public void testTranslatedMainApp() throws Throwable {
-		String expected=FileUtils.readFileToString(new File("expected/MainApp.cs"), "UTF-8");
-		String actual=FileUtils.readFileToString(new File("src/main/main.net/Giis.Sharpen.Action/MainApp.cs"), "UTF-8");
+		String expected=FileUtils.readFileToString(new File("expected/MainApp.cs"), "UTF-8").replace("\r","");
+		String actual=FileUtils.readFileToString(new File("src/main/main.net/Giis.Sharpen.Action/MainApp.cs"), "UTF-8").replace("\r","");
 		assertEquals(expected, actual);
 	}
 	@Test
 	public void testTranslatedSimpleClass() throws Throwable {
-		String expected=FileUtils.readFileToString(new File("expected/SimpleClass.cs"), "UTF-8");
-		String actual=FileUtils.readFileToString(new File("src/main/main.net/Giis.Sharpen.Action/SimpleClass.cs"), "UTF-8");
+		String expected=FileUtils.readFileToString(new File("expected/SimpleClass.cs"), "UTF-8").replace("\r","");
+		String actual=FileUtils.readFileToString(new File("src/main/main.net/Giis.Sharpen.Action/SimpleClass.cs"), "UTF-8").replace("\r","");
 		assertEquals(expected, actual);
 	}
 }

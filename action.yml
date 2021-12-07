@@ -9,14 +9,14 @@ inputs:
   project-dir:
     description: 'Directory that contains the java source code to be converted'
     required: true
-  args:
+  sharpen-args:
     description: 'Additional arguments to be passed to sharpen'
     required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ working-dir }}
-    - ${{ project-dir }}
-    - ${{ args }}
+    - ${{ inputs.working-dir }}
+    - ${{ inputs.project-dir }}
+    - ${{ inputs.sharpen-args }}
     
