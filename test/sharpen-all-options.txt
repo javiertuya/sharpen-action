@@ -1,0 +1,8 @@
+#see full configuration example at https://github.com/ydanila/sharpen_imazen_config/blob/master/sharpen-all-options
+
+-flatDirectoryStructure
+-pascalCase+ 
+-organizeUsings 
+-nativeTypeSystem 
+-separateInterfaceConstants 
+-maxColumns 280 
