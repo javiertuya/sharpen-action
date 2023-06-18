@@ -18,13 +18,13 @@ jobs:
           sharpen-args: '@sharpen-all-options.txt'
       - name: Test converted files
         run: cd test && mvn test --no-transfer-progress -Dmaven.test.failure.ignore=true
-      - name: Pubish test report
+      - name: Publish test report
         if: always()
-        uses: scacap/action-surefire-report@v1
+        uses: mikepenz/action-junit-report@v3.7.7
         with:
           check_name: test-report
           report_paths: '**/target/surefire-reports/TEST-*.xml'
-          fail_on_test_failures: 'true'
+          fail_on_failure: 'true'
       - name: Publish converted sources & test report files
         if: always()
         uses: actions/upload-artifact@v2
@@ -32,4 +32,5 @@ jobs:
           name: converted sources & test reports
           path: |
             test/src/main/main.net
+            test/target/*.html
             test/target/surefire-reports
