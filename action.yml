@@ -1,6 +1,10 @@
 # action.yml
 name: 'Sharpen docker action'
-description: 'runs mono sharpen java to C## converter in a java 7 container'
+description: 'Conversion from Java to C# using mono/sharpen converter'
+author: "Javier Tuya"
+branding:
+  icon: hash
+  color: blue
 inputs:
   working-dir:
     description: 'Directory from which sharpen will be run'
