@@ -20,7 +20,7 @@ jobs:
         run: cd test && mvn test --no-transfer-progress -Dmaven.test.failure.ignore=true
       - name: Publish test report
         if: always()
-        uses: mikepenz/action-junit-report@v3.7.8
+        uses: mikepenz/action-junit-report@v3.8.0
         with:
           check_name: test-report
           report_paths: '**/target/surefire-reports/TEST-*.xml'
